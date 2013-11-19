@@ -1,4 +1,6 @@
-## This script will calculate uncorrected p-distances from a  phylip file of n sequences
+## This script is from Johnson et al. in review, and will  calculate uncorrected p-distances from a 
+##  phylip file of n sequences
+
 
 #!usr/bin/perl
 
