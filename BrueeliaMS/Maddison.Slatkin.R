@@ -6,8 +6,7 @@ library(phylobase)
 
 #######################################################################
 ## This creates a function to do randomizations of a character on a tree  and calculate a p value
-## This code is modified from  https://stat.ethz.ch/pipermail/r-sig-phylo/2011-March/001037.html
-##   
+## This code is modified from  https://stat.ethz.ch/pipermail/r-sig-phylo/2011-March/001037.html 
 #######################################################################
 
 
