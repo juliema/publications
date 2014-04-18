@@ -2,7 +2,7 @@
 ##  phylip file of n sequences
 
 
-#!usr/bin/perl
+#!usr/bin/env perl
 
 
 system "ls -l *listofgenes.phy >filenames";
