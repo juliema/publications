@@ -3,24 +3,24 @@
 use strict;
 use warnings;
 
-my $burnin=shift;
+my $burnin=shift;  ## generation number not total number of samples to remove
 my $treefile=shift;
 my $outfile=shift;
 
-[my $burnin = 20000000;]
+
 
 my $countree=0;
-[open OUT, ">BrueeliaCOI.10.3.2013MB.YBD.NOBURNIN.trees";]
-[open FH, "<BrueeliaCOI.10.3.2013MB.YBD.trees";]
+my $postnumber=0;
 
 open FH, "<$treefile";
-open OUt, ">$outfile";
+open OUT, ">$outfile";
 while (<FH>) { 
     if (/^tree\s+STATE_(\d+)/) {
 	my $gen=$1;
+	$countree++;
 	if ($gen > $burnin) {
 	    print OUT;
-	    $countree++;
+	    $postnumber++;
 	}
     }
     else {
@@ -28,5 +28,5 @@ while (<FH>) {
     }
 }
 
-print "There were $countree trees in the file\n";
-	
+print "There were $countree trees in the file and we kept $postnumber\n";
+
