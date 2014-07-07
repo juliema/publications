@@ -3,33 +3,38 @@
 use strict;
 use warnings;
 
-my @array=();
-open OUT, ">BEAST.Random.300.tre";
+my $random = shift;
+# the number of trees you want randomly selected.
+my $inputfile = shift;
+#  THIS IS YOUR INPUT TREE FILE WIHTOUT THE BURNIN
+my $outputfile = shift;
+## name a new file called FILESOMETHING.random.tre 
 
-open FH, "<BrueeliaCOI.10.3.2013MB.YBD.NOBURNIN.trees";
+my @array=();
+open OUT, ">$outputfile";
+open FH, "<$inputfile";
 while (<FH>) {
     if (/^tree\s+STATE_(\d+)\s/) {
 	my $gen=$1;
 	push @array, $gen;
-#	print "$gen\n";
     }
 }
 
 
 my %randomhash=();
-for (1..300) {
+for (1..$random) {
     my $array_size = @array;
     my $index = int(rand($array_size));
     my $gen=$array[$index];
     $randomhash{$gen}=1;
 #    push @randomarray, $gen;
-    splice @array, $index, 1;
+    splice(@array, $index, 1);
     print "$gen\n";
 }
 
 
 my $countree=0;
-open FHx, "<BrueeliaCOI.10.3.2013MB.YBD.NOBURNIN.trees";
+open FHx, "<$inputfile";
 while (<FHx>) {
     if (/^tree\s+STATE_(\d+)/) {
 	my $gen=$1;
