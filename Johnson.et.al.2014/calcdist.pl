@@ -1,8 +1,7 @@
 #!usr/bin/env perl
 
 ## This script will  calculate uncorrected p-distances from a 
-##  aligned phylip file of n sequences. Each file will produce one distance file
-### must be an aligned phy file
+##  aligned phylip or fasta file of n sequences. Each file will produce one distance file.
 
 use strict;
 use warnings;
