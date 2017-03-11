@@ -1,4 +1,5 @@
-Unpublished Manuscript
+Please Cite: 
+Bush, S. E., Weckstein, J. D., Gustafsson, D. R., Allen, J., DiBlasi, E., Shreve, S. M., ... Johnson, K. P. (2016). Unlocking the black box of feather louse diversity: A molecular phylogeny of the hyper-diverse genus Brueelia. Molecular Phylogenetics and Evolution, 94, 737-751. DOI: 10.1016/j.ympev.2015.09.015
 
 
 1.  get post burnin trees from BEAST run removeburnin.pl
